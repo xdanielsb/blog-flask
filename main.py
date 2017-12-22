@@ -20,7 +20,7 @@ app.config['DEBUG'] = False
 def getRandomColors( n = 30 ):
     colors = []
     for i in range(n):
-        r = lambda: random.randint(0,255)
+        r = lambda: random.randint(0,200)
         color = '#%02X%02X%02X' % (r(),r(),r())
         colors.append(color)
     return colors
