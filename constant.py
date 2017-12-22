@@ -1,2 +1,1 @@
-constants =
-  {"urlUsers": "https://jsonplaceholder.typicode.com/users"}
+constants = {"urlUsers": "https://jsonplaceholder.typicode.com/users"}
