@@ -11,7 +11,6 @@ function request_comment_dto(response){
                     "<span class='title'> <b>"+comment["email"]+" </b> <br> </span>"+
                     comment["body"]+
                     "</p>"+
-                    "<a href='#!' class='secondary-content'><i class='material-icons'>visibility</i></a>"+
                     "</li>"
     payload += content
   }
