@@ -3,7 +3,7 @@
 from flask import Flask, render_template
 from constant import constants
 import random
-import urllib2
+import urllib3
 import json
 
 __author__ = "Daniel Fernando Santos Bustos"
@@ -28,8 +28,10 @@ def getRandomColors( n = 30 ):
 @app.route('/')
 def index():
     url  = constants["urlUsers"]
-    data = urllib2.urlopen(url)
-    result = json.load(data)
+    http = urllib3.PoolManager()
+    response = http.request('GET', url)
+    dat = response.data.decode('utf-8')
+    result = json.loads(dat)
     colors = getRandomColors()
     return render_template('index.html', users=result, colors= colors)
 
