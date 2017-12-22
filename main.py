@@ -13,8 +13,8 @@ __maintainer__ = "Daniel Santos"
 __email__ = "dfsantosbu@unal.edu.co"
 __status__ = "Development"
 
-app = Flask(__name__)
-app.config['DEBUG'] = False
+app=Flask(__name__)
+app.secret_key = '15%&*^&^GJHYTDT24623/*@!@#G@JH$%+9'
 
 
 def getRandomColors( n = 30 ):
